@@ -1,6 +1,6 @@
 import { Chapter } from "./types";
 
-export const APP_NAME = "AlgoViet";
+export const APP_NAME = "THCS Phổ Quang";
 
 export const CURRICULUM: Chapter[] = [
   {
@@ -14,7 +14,7 @@ export const CURRICULUM: Chapter[] = [
           {
             type: "heading",
             level: 2,
-            content: "Chào mừng bạn đến với AlgoViet",
+            content: "Chào mừng bạn đến với THCS Phổ Quang",
           },
           {
             type: "text",
@@ -377,6 +377,25 @@ print(10 ** 100)  # Số khổng lồ`,
               "Lưu ý quan trọng: Trong Python, n % m luôn cùng dấu với m (mẫu số). Ví dụ: -7 % 3 = 2 (không phải -1).",
           },
         ],
+        exercise: {
+          title: "Tính thương và dư",
+          description:
+            "Đọc hai số nguyên A và B từ file MATH.INP. Tính A // B (thương) và A % B (dư). Ghi kết quả ra file MATH.OUT theo định dạng: thương dư.",
+          inputFile: "MATH.INP",
+          outputFile: "MATH.OUT",
+          testCases: [
+            {
+              input: "17 5",
+              expectedOutput: "3 2",
+              isPublic: true,
+            },
+            {
+              input: "100 7",
+              expectedOutput: "14 2",
+              isPublic: false,
+            },
+          ],
+        },
       },
     ],
   },
@@ -528,6 +547,25 @@ if x > 0:
               "Tip: Giữ code của bạn phẳng (không quá sâu). Nếu più hơn 3 mức lồng, hãy xem xét refactor lại logic.",
           },
         ],
+        exercise: {
+          title: "Xác định góc phần tư",
+          description:
+            "Đọc tọa độ hai điểm (x, y) từ file QUAD.INP. Xác định điểm nằm trong góc phần tư nào (I, II, III, IV) hoặc trên trục. Ghi kết quả ra file QUAD.OUT.",
+          inputFile: "QUAD.INP",
+          outputFile: "QUAD.OUT",
+          testCases: [
+            {
+              input: "5 3",
+              expectedOutput: "I",
+              isPublic: true,
+            },
+            {
+              input: "-2 4",
+              expectedOutput: "II",
+              isPublic: false,
+            },
+          ],
+        },
       },
       {
         id: "equations-basic",
@@ -668,6 +706,20 @@ print(f"Viên đạn rơi xuống lúc t = {t2} giây")`,
               "Sai lầm thường gặp: Quên kiểm tra a = 0 trước khi tính Delta hoặc dùng công thức.",
           },
         ],
+        exercise: {
+          title: "Giải phương trình bậc hai",
+          description:
+            "Đọc ba hệ số a, b, c từ file PT.INP. Giải phương trình ax² + bx + c = 0. Ghi số lượng nghiệm và giá trị nghiệm (nếu có) ra file PT.OUT.",
+          inputFile: "PT.INP",
+          outputFile: "PT.OUT",
+          testCases: [
+            {
+              input: "1 -5 6",
+              expectedOutput: "2\n2.0 3.0",
+              isPublic: true,
+            },
+          ],
+        },
       },
     ],
   },
@@ -779,6 +831,25 @@ for i in range(len(matrix)):     # Dòng
               "Cảnh báo: Với N = 10^4, O(N²) = 10^8 phép toán, gần như giới hạn. N > 10^4 sẽ timeout!",
           },
         ],
+        exercise: {
+          title: "Tính tổng dãy số",
+          description:
+            "Đọc số N từ file TONG.INP. Tính tổng từ 1 + 2 + 3 + ... + N. Ghi kết quả ra file TONG.OUT.",
+          inputFile: "TONG.INP",
+          outputFile: "TONG.OUT",
+          testCases: [
+            {
+              input: "10",
+              expectedOutput: "55",
+              isPublic: true,
+            },
+            {
+              input: "100",
+              expectedOutput: "5050",
+              isPublic: false,
+            },
+          ],
+        },
       },
       {
         id: "break-continue-pass",
@@ -875,6 +946,20 @@ for i in range(1, 21):
               "Tip: Dùng `break` khi tìm thấy kết quả và không cần tìm tiếp. Dùng `continue` khi bạn muốn bỏ qua một trường hợp nhưng vẫn tiếp tục lặp.",
           },
         ],
+        exercise: {
+          title: "Tìm số nguyên tố đầu tiên",
+          description:
+            "Đọc số N từ file PRIME.INP. Tìm số nguyên tố đầu tiên >= N. Ghi kết quả ra file PRIME.OUT.",
+          inputFile: "PRIME.INP",
+          outputFile: "PRIME.OUT",
+          testCases: [
+            {
+              input: "10",
+              expectedOutput: "11",
+              isPublic: true,
+            },
+          ],
+        },
       },
     ],
   },
@@ -1035,6 +1120,20 @@ result = "-".join(words)  # Algo-Viet-2024`,
               'Lưu ý: String là bất biến. s[0] = "X" sẽ gây lỗi. Dùng string mới: s = "X" + s[1:]',
           },
         ],
+        exercise: {
+          title: "Đảo ngược chuỗi",
+          description:
+            "Đọc một chuỗi từ file REVERSE.INP. Đảo ngược chuỗi và ghi kết quả ra file REVERSE.OUT.",
+          inputFile: "REVERSE.INP",
+          outputFile: "REVERSE.OUT",
+          testCases: [
+            {
+              input: "AlgoViet",
+              expectedOutput: "teiVogIA",
+              isPublic: true,
+            },
+          ],
+        },
       },
       {
         id: "dict-set-hsg",
@@ -1192,6 +1291,20 @@ for name, score in scores.items():
               "Tip: Dùng Dict khi bạn cần tra cứu nhanh theo khóa. Dùng Set khi chỉ cần kiểm tra phần tử có tồn tại hay không.",
           },
         ],
+        exercise: {
+          title: "Đếm tần suất ký tự",
+          description:
+            "Đọc một chuỗi từ file FREQ.INP. Đếm tần suất của mỗi ký tự. Ghi kết quả ra file FREQ.OUT theo định dạng: ký_tự tần_suất (một dòng per ký tự).",
+          inputFile: "FREQ.INP",
+          outputFile: "FREQ.OUT",
+          testCases: [
+            {
+              input: "hello",
+              expectedOutput: "h 1\ne 1\nl 2\no 1",
+              isPublic: true,
+            },
+          ],
+        },
       },
     ],
   },
@@ -1338,6 +1451,25 @@ print(squares)`,
               "Tip: Khi kiểm tra √n, hãy dùng int(n**0.5) hoặc math.isqrt(n) (Python 3.8+). Tránh lỗi do sai số float!",
           },
         ],
+        exercise: {
+          title: "Kiểm tra số nguyên tố",
+          description:
+            "Đọc số N từ file PRIME2.INP. Kiểm tra N có phải số nguyên tố hay không. Ghi 'YES' hoặc 'NO' ra file PRIME2.OUT.",
+          inputFile: "PRIME2.INP",
+          outputFile: "PRIME2.OUT",
+          testCases: [
+            {
+              input: "17",
+              expectedOutput: "YES",
+              isPublic: true,
+            },
+            {
+              input: "18",
+              expectedOutput: "NO",
+              isPublic: false,
+            },
+          ],
+        },
       },
       {
         id: "factors-multiples",
@@ -1471,6 +1603,20 @@ print(48 % 6, 18 % 6)  # (0, 0) - cả hai đều chia hết`,
               "Tip: Trong bài HSG, dùng math.gcd() để tiết kiệm thời gian code. Nhưng hiểu cách tính ƯCLN bằng Euclid cũng rất quan trọng!",
           },
         ],
+        exercise: {
+          title: "Tính ƯCLN và BCNN",
+          description:
+            "Đọc hai số A và B từ file UCLN.INP. Tính ƯCLN(A,B) và BCNN(A,B). Ghi kết quả ra file UCLN.OUT theo định dạng: ƯCLN BCNN.",
+          inputFile: "UCLN.INP",
+          outputFile: "UCLN.OUT",
+          testCases: [
+            {
+              input: "12 18",
+              expectedOutput: "6 36",
+              isPublic: true,
+            },
+          ],
+        },
       },
     ],
   },
@@ -1597,6 +1743,20 @@ print(f"Khoang cach: {dist:.4f}")  # 0.7071 (la sqrt(2)/2)`,
               "Tip: Tích có hướng là công cụ rất mạnh trong hình học tính toán. Đa số bài toán hình học HSG đều cần nó!",
           },
         ],
+        exercise: {
+          title: "Kiểm tra ba điểm thẳng hàng",
+          description:
+            "Đọc tọa độ ba điểm A, B, C từ file COLINEAR.INP. Kiểm tra ba điểm có thẳng hàng không. Ghi 'YES' hoặc 'NO' ra file COLINEAR.OUT.",
+          inputFile: "COLINEAR.INP",
+          outputFile: "COLINEAR.OUT",
+          testCases: [
+            {
+              input: "0 0 1 1 2 2",
+              expectedOutput: "YES",
+              isPublic: true,
+            },
+          ],
+        },
       },
       {
         id: "shapes-advanced",
@@ -1749,6 +1909,20 @@ print(f"Diện tích hình chữ nhật: {area}")  # 12.0`,
               "Chú ý: Công thức Shoelace đòi hỏi các đỉnh phải được sắp xếp theo thứ tự (cùng chiều hoặc ngược chiều kim đồng hồ).",
           },
         ],
+        exercise: {
+          title: "Tính diện tích tam giác",
+          description:
+            "Đọc tọa độ ba đỉnh A, B, C từ file TRIANGLE.INP. Tính diện tích tam giác ABC dùng công thức tọa độ. Ghi kết quả (làm tròn 2 chữ số thập phân) ra file TRIANGLE.OUT.",
+          inputFile: "TRIANGLE.INP",
+          outputFile: "TRIANGLE.OUT",
+          testCases: [
+            {
+              input: "0 0 4 0 0 3",
+              expectedOutput: "6.00",
+              isPublic: true,
+            },
+          ],
+        },
       },
     ],
   },
@@ -1892,6 +2066,20 @@ print(lis([3, 1, 4, 1, 5, 9, 2]))  # 4 (dãy [1, 4, 5, 9])`,
               "Lưu ý: Dãy con là khái niệm rộng hơn đoạn con. Mỗi đoạn con đều là dãy con, nhưng không phải dãy con nào cũng là đoạn con!",
           },
         ],
+        exercise: {
+          title: "Tính số Fibonacci thứ N",
+          description:
+            "Đọc số N từ file FIB.INP. Tính số Fibonacci thứ N (F(1)=1, F(2)=1, F(n)=F(n-1)+F(n-2)). Ghi kết quả ra file FIB.OUT.",
+          inputFile: "FIB.INP",
+          outputFile: "FIB.OUT",
+          testCases: [
+            {
+              input: "10",
+              expectedOutput: "55",
+              isPublic: true,
+            },
+          ],
+        },
       },
       {
         id: "divide-conquer-deep",
@@ -2044,6 +2232,20 @@ print(quick_sort(arr))  # [1, 1, 2, 3, 4, 5, 9]`,
               "Tip: Chia để trị là một kỹ thuật rất mạnh. Ngoài sắp xếp, nó còn dùng cho tìm kiếm, tính toán (FFT), và nhiều bài toán khác!",
           },
         ],
+        exercise: {
+          title: "Tìm phần tử lớn nhất (Binary Search)",
+          description:
+            "Đọc một mảng đã sắp xếp và số X từ file BINSEARCH.INP. Tìm vị trí của X trong mảng dùng Binary Search. Ghi vị trí (1-indexed) hoặc -1 nếu không tìm thấy ra file BINSEARCH.OUT.",
+          inputFile: "BINSEARCH.INP",
+          outputFile: "BINSEARCH.OUT",
+          testCases: [
+            {
+              input: "1 3 5 7 9 11 13\n7",
+              expectedOutput: "4",
+              isPublic: true,
+            },
+          ],
+        },
       },
     ],
   },
