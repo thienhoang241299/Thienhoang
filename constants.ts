@@ -30,7 +30,7 @@ export const CURRICULUM: Chapter[] = [
         ],
       },
       {
-        id: "algo-mindset",
+        id: "thienhb-mindset",
         title: "Tư duy Thuật toán & Debug",
         content: [
           { type: "heading", level: 2, content: "Quy trình giải bài HSG" },
@@ -166,10 +166,10 @@ print(abs(x - 0.3) < eps)  # True - đúng!`,
           {
             type: "code",
             language: "python",
-            content: `name = "AlgoViet"
+            content: `name = "Thienhb"
 message = 'Hello World'
 combined = name + " - " + message
-print(combined)  # AlgoViet - Hello World
+print(combined)  # THCS Phổ Quang - Hello World
 
 # Lấy ký tự tại vị trí
 print(name[0])  # A
@@ -199,7 +199,7 @@ print(can_drive)  # False`,
             content: `# Ví dụ toàn bộ các kiểu
 a = 42              # int
 b = 3.14            # float
-s = "AlgoViet"      # str
+s = "ThcsPhoQuang"      # str
 check = True        # bool
 
 print(type(a))      # <class 'int'>
@@ -1071,7 +1071,7 @@ sub = a[:]    # [0, 1, 2, ..., 9]`,
           {
             type: "code",
             language: "python",
-            content: `s = "AlgoViet"
+            content: `s = "ThcsPhoQuang"
 
 # Truy cập ký tự
 print(s[0])   # A
@@ -1079,8 +1079,8 @@ print(s[-1])  # t
 print(s[4])   # V
 
 # Cắt chuỗi
-print(s[0:4])   # Algo
-print(s[4:])    # Viet
+print(s[0:4])   # THCS
+print(s[4:])    # PhoQuang
 
 # Độ dài
 print(len(s))   # 8`,
@@ -1108,8 +1108,8 @@ s = "apple,banana,cherry"
 fruits = s.split(",")  # ["apple", "banana", "cherry"]
 
 # join() - Nối các phần tử
-words = ["Algo", "Viet", "2024"]
-result = "-".join(words)  # Algo-Viet-2024`,
+words = ["THCS", "Pho", "Quang"]
+result = "-".join(words)  # THCS-Pho-Quang`,
             title: "Các phương thức chuỗi",
           },
 
@@ -1128,8 +1128,8 @@ result = "-".join(words)  # Algo-Viet-2024`,
           outputFile: "REVERSE.OUT",
           testCases: [
             {
-              input: "AlgoViet",
-              expectedOutput: "teiVogIA",
+              input: "THCSPHOQUANG",
+              expectedOutput: "QUANGPHOCSTH",
               isPublic: true,
             },
           ],
@@ -1309,7 +1309,7 @@ for name, score in scores.items():
     ],
   },
   {
-    id: "math-algos",
+    id: "math-thienhb",
     title: "6. Số học chuyên sâu",
     lessons: [
       {
